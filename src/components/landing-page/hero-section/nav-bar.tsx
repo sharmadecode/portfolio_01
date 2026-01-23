@@ -9,7 +9,7 @@ import {
   Mail,
 } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { SEO_CONFIG } from "@/config/seo";
+import { SOCIAL_LINKS } from "@/config/seo";
 import { SiLeetcode } from "react-icons/si";
 
 const Navbar = () => {
@@ -60,27 +60,27 @@ const Navbar = () => {
         <div className="flex   gap-6 max-sm:gap-4 ">
           {[
             {
-              href: SEO_CONFIG.social.github,
+              href: SOCIAL_LINKS.github,
               title: "GitHub",
               icon: Github,
             },
             {
-              href: SEO_CONFIG.social.linkedin,
+              href: SOCIAL_LINKS.linkedin,
               title: "LinkedIn",
               icon: LucideLinkedin,
             },
             {
-              href: SEO_CONFIG.social.twitter,
+              href: SOCIAL_LINKS.twitter,
               title: "Twitter",
               icon: Twitter,
             },
             {
-              href: SEO_CONFIG.social.leetcode,
+              href: SOCIAL_LINKS.leetcode,
               title: "LeetCode",
               icon: SiLeetcode,
             },
             {
-              href: SEO_CONFIG.social.calendly,
+              href: SOCIAL_LINKS.email,
               title: "Email",
               icon: Mail,
             },
