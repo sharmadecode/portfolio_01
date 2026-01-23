@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Aditya Sharma
+Site: adityasharma.me
+Location: India
+
+/* SOCIALS */
+Twitter: @sharmadecode
+GitHub: github.com/sharmadecode
+LinkedIn: linkedin.com/in/aditya-sharma-109718322
+Website: adityasharma.me
+
+/* THANKS */
+Thanks to Next.js, React, and Open Source.

@@ -1,0 +1,65 @@
+export const WebProjectsArr = [
+  {
+    name: "BharatKrishi",
+    link: "https://github.com/sharmadecode/BharatKrishi",
+    image: "/projects/bharat-krishi-1.jpg",
+    images: ["/projects/bharat-krishi-1.jpg", "/projects/bharat-krishi-2.jpg", "/projects/bharat-krishi-3.jpg"],
+    github: "https://github.com/sharmadecode/BharatKrishi",
+    demo: "",
+    figmaFile: "",
+    tech: [
+      "Kotlin",
+      "Jetpack Compose",
+      "MobileViT",
+      "TensorFlow Lite",
+      "ONNX",
+      "Python",
+      "Computer Vision",
+      "Firebase",
+      "REST APIs",
+      "Geolocation",
+      "Web Dashboard",
+      "Notification",
+    ],
+    timeLine: "Completed",
+    Description:
+      "Offline On-Device Crop Disease Detection (SIH 2025 Finalist). A bilingual Android application for offline crop disease detection, designed for low-connectivity rural environments using a lightweight MobileViT model.",
+    status: "Completed",
+  },
+  {
+    name: "JalSuraksha",
+    link: "https://github.com/sharmadecode/JalSuraksha",
+    image: "/projects/jal-suraksha-1.png",
+    images: ["/projects/jal-suraksha-1.png", "/projects/jal-suraksha-2.png", "/projects/jal-suraksha-3.png"],
+    github: "https://github.com/sharmadecode/JalSuraksha",
+    demo: "",
+    figmaFile: "",
+    tech: [
+      "Kotlin",
+      "Jetpack Compose",
+      "TensorFlow Lite",
+      "Firebase",
+      "REST APIs",
+      "GPS & Geofencing",
+    ],
+    timeLine: "Completed",
+    Description:
+      "AI-Based Flood & Water-Level Monitoring System. An Android application for real-time flood monitoring using image-based water-level estimation with offline field data collection.",
+    status: "Completed",
+  },
+  {
+    name: "NutriScan",
+    link: "",
+    image: "",
+    github: "",
+    demo: "",
+    figmaFile: "",
+    tech: ["Kotlin", "Jetpack Compose", "On-device ML (planned)"],
+    timeLine: "Upcoming",
+    Description:
+      "On-Device Food Ingredient Scanner. An Android app to scan food labels and analyze ingredients using on-device processing.",
+    status: "Upcoming",
+  },
+];
+
+

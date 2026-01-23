@@ -1,0 +1,10 @@
+# Security Policy for adityasharma.me
+# Contact Aditya Sharma for security concerns
+
+Contact: https://adityasharma.me
+Contact: mailto:adityarakeshsharma07@gmail.com
+Contact: https://linkedin.com/in/aditya-sharma-109718322
+
+Canonical: https://adityasharma.me/.well-known/security.txt
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en

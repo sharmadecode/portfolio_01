@@ -1,0 +1,47 @@
+{
+  "name": "Aditya Sharma - Mobile & ML Developer",
+  "short_name": "Aditya Sharma",
+  "description": "Official portfolio of Aditya Sharma — Android Developer & ML Engineer. Explore projects, skills, and contact details.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/cartoon-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/cartoon-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Home",
+      "short_name": "Home",
+      "description": "Aditya Sharma Portfolio Homepage",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/cartoon-logo.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "description": "View Aditya Sharma's projects",
+      "url": "/projects",
+      "icons": [
+        {
+          "src": "/cartoon-logo.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
