@@ -20,7 +20,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/private/"],
       },
       {
-        userAgent: "Slurp", // Yahoo
+        userAgent: "Slurp",
         allow: "/",
         disallow: ["/api/", "/private/"],
       },

@@ -1,4 +1,3 @@
-import ArrowButton from "@/components/ui/arrow-button";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -8,14 +7,11 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { GithubIcon } from "../ui/github";
 import { LinkedinIcon } from "../ui/linkedin";
-import { SiX } from "react-icons/si";
-import { InstagramIcon } from "../ui/instagram";
-import { FileTextIcon } from "../ui/file-text";
+import { SiX, SiLeetcode } from "react-icons/si";
 import { RainbowButton } from "../ui/rainbow-button";
 import { ArrowRight, Mail } from "lucide-react";
 import { SOCIAL_LINKS } from "@/config/seo";
 import { ShinyButton } from "../ui/shiny-button";
-import { SiLeetcode } from "react-icons/si";
 import { InteractiveUnderline } from "../ui/interactive-underline";
 
 const Intro = () => {
@@ -122,8 +118,7 @@ const Intro = () => {
       <div className="flex flex-wrap  gap-2 mt-6 z-20 mb-4">
         <RainbowButton asChild>
           <a
-            href="/resume.pdf"
-            download
+            href="/Aditya-Sharma-Resume-Final.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2"

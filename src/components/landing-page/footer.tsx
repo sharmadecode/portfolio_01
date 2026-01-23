@@ -2,7 +2,8 @@
 import React, { useRef, useCallback } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import { SiDiscord } from "react-icons/si";
+import Link from "next/link";
 
 interface FooterStringProps {
   soundUrl?: string;
@@ -170,18 +171,61 @@ export default function Footer() {
           className="w-32 sm:mask-r-from-90% absolute right-0 max-sm:blur-[2px] max-sm:hidden dark:hidden block"
           style={{ transform: "rotateX(180deg)" }}
         />
-        <div className="flex items-start gap-4 mt-4">
+
+        {/* Discord Section - Compact & Animated */}
+        <div className="mt-6 mb-8 flex justify-center">
+          <Link
+            href="https://discord.gg/83MQcgxy"
+            target="_blank"
+            className="group relative inline-flex items-center gap-3 px-4 py-2.5 rounded-xl
+              bg-gradient-to-r from-[#5865F2]/10 via-[#7289DA]/10 to-[#5865F2]/10
+              border border-[#5865F2]/30 hover:border-[#5865F2]/60
+              hover:shadow-[0_0_20px_rgba(88,101,242,0.3)]
+              transition-all duration-300"
+          >
+            {/* Discord Icon */}
+            <div className="p-1.5 rounded-lg bg-gradient-to-br from-[#5865F2] to-[#7289DA]
+              group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+              <SiDiscord className="w-4 h-4 text-white" />
+            </div>
+
+            {/* Animated Text */}
+            <span className="relative text-sm font-medium h-5 overflow-hidden">
+              <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+                Want to talk?
+              </span>
+              <span className="absolute top-0 left-0 text-[#5865F2] font-semibold 
+                translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+                Let's connect! ✨
+              </span>
+            </span>
+
+            {/* Arrow */}
+            <svg
+              className="w-4 h-4 text-[#5865F2] transition-transform duration-300
+                group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Footer Text */}
+        <div className="flex items-start">
           <div className="flex flex-col items-start">
             <h1 className="text-2xl">Aditya Sharma</h1>
             <h2 className="text-muted-foreground">
-              Building <span className="underline">app</span> &{" "}
-              <span className="underline">ML models</span>&nbsp;
-              <span className="italic">experiences</span> ✧.
+              Building <span className="underline">app frontends</span>,{" "}
+              <span className="underline">Spring-based backends</span> &{" "}
+              <span className="italic">ML models</span> ✧.
             </h2>
           </div>
         </div>
 
-        <div className="text-right text-[15px] text-muted-foreground mt-15">
+        <div className="text-right text-[15px] text-muted-foreground mt-8">
           <div>Made with ♡ using Next.js</div>
           <div className="text-xs text-muted-foreground">
             © 2026 Aditya Sharma
@@ -191,3 +235,4 @@ export default function Footer() {
     </div>
   );
 }
+

@@ -1,9 +1,9 @@
 'use client';
 
-import type { Transition, Variants } from 'motion/react';
+import type { Transition, Variants } from 'framer-motion';
 import type { HTMLAttributes } from 'react';
 import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { motion, useAnimation } from 'motion/react';
+import { motion, useAnimation } from 'framer-motion';
 
 import { cn } from '@/lib/utils';
 

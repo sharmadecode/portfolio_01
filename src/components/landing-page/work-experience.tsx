@@ -12,10 +12,25 @@ const WorkExperience = () => {
     <>
       {" "}
       <section className=" my-5  w-full">
-        <header className="font-bold text-xl border-b-2 border-primary/20 w-fit mb-4">
-          Work Experience
-        </header>
-        <div className="mt-2 flex flex-col gap-3">
+        <div className="flex items-center justify-between mb-4">
+          <header className="font-bold text-xl border-b-2 border-primary/20 w-fit">
+            Work Experience
+          </header>
+
+          {/* Availability Badge - Boxy Rectangle */}
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-md
+            bg-emerald-500/10 border border-emerald-500/30">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
+              Open to collaborate
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3">
           {data.map((experience, index) => (
             <div key={index} className="flex gap-4 items-center">
               <img

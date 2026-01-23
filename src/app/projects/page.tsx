@@ -1,4 +1,3 @@
-import Shaders from "@/components/smart-one/shaders";
 import ProjectsTabs from "@/components/smart-one/projects-tab";
 import type { Metadata } from "next";
 
@@ -47,8 +46,7 @@ export const metadata: Metadata = {
 
 const Projects = () => {
   return (
-    <div className="flex  justify-center pt-5">
-      <Shaders />
+    <div className="flex justify-center pt-5">
       <ProjectsTabs num1={0} num2={undefined} />
     </div>
   );

@@ -4,12 +4,9 @@ import WorkExperience from "../work-experience";
 import Education from "../education";
 import Skills from "../skills";
 import Intro from "../intro";
-
 import Projects from "../projects";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import Image from "next/image";
-import Task from "../task";
-import PixelPerfect from "../pixel-perfect";
 
 const HeroContent = () => {
   return (
@@ -39,17 +36,8 @@ const HeroContent = () => {
       <Intro />
       <Skills />
       <Projects />
-      {/* <GithubActivity /> */}
-
-      {/* <PixelPerfect /> */}
-      {/* <Blogs /> */}
       <WorkExperience />
       <Education />
-
-      <Task />
-      {/* <Socials /> */}
-      {/* <Tools /> */}
-
       <ScrollProgress />
     </div>
   );
