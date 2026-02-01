@@ -33,7 +33,14 @@ export function ModeToggle() {
     <Button
       variant="outline"
       size="icon"
-      onClick={() => setTheme(effectiveTheme === "dark" ? "light" : "dark")}
+      onClick={() => {
+        const switchTheme = () => setTheme(effectiveTheme === "dark" ? "light" : "dark");
+        if (!document.startViewTransition) {
+          switchTheme();
+          return;
+        }
+        document.startViewTransition(switchTheme);
+      }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

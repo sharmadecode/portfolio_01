@@ -1,21 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
 
 export const MusicToggleButton = () => {
-  const bars = 5;
-
-  const getRandomHeights = () => {
-    return Array.from({ length: bars }, () => Math.random() * 0.8 + 0.2);
-  };
-
-  const [heights, setHeights] = useState(getRandomHeights());
-
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const [play, { pause, sound }] = useSound("/audio/v1.mp3", {
+  const [play, { pause, sound }] = useSound("/audio/verdisquo.mp3", {
     loop: true,
     onplay: () => setIsPlaying(true),
     onend: () => setIsPlaying(false),
@@ -23,19 +15,6 @@ export const MusicToggleButton = () => {
     onstop: () => setIsPlaying(false),
     soundEnabled: true,
   });
-
-  useEffect(() => {
-    if (isPlaying) {
-      const waveformIntervalId = setInterval(() => {
-        setHeights(getRandomHeights());
-      }, 100);
-
-      return () => {
-        clearInterval(waveformIntervalId);
-      };
-    }
-    setHeights(Array(bars).fill(0.1));
-  }, [isPlaying]);
 
   const handleClick = () => {
     if (isPlaying) {
@@ -48,40 +27,64 @@ export const MusicToggleButton = () => {
   };
 
   return (
-    <>
-      <motion.div
-        onClick={handleClick}
-        key="audio"
-        className=" border cursor-pointer rounded-md px-2 py-2.5  dark:bg-transparent  bg-background"
-      >
-        <motion.div
-          initial={{ opacity: 0, filter: "blur(4px)" }}
-          animate={{
-            opacity: 1,
-            filter: "blur(0px)",
-          }}
-          exit={{ opacity: 0, filter: "blur(4px)" }}
-          transition={{ type: "spring", bounce: 0.35 }}
-          className="flex h-[18px] w-full items-center gap-1 rounded-full "
-        >
-          {/* Waveform visualization */}
-          {heights.map((height, index) => (
+    <motion.button
+      onClick={handleClick}
+      className="relative border cursor-pointer rounded-md p-2.5 dark:bg-transparent bg-background hover:bg-muted/50 transition-colors"
+      role="button"
+      aria-label={isPlaying ? "Pause background music" : "Play background music"}
+      title={isPlaying ? "Pause music" : "Play music"}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <div className="w-5 h-5 relative flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          {isPlaying ? (
+            // Animated music bars when playing
             <motion.div
-              key={index}
-              className="bg-foreground w-[1px] rounded-full"
-              initial={{ height: 1 }}
-              animate={{
-                height: Math.max(4, height * 14),
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 10,
-              }}
-            />
-          ))}
-        </motion.div>
-      </motion.div>
-    </>
+              key="playing"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex items-end gap-[3px] h-4"
+            >
+              {[0, 1, 2].map((i) => (
+                <motion.div
+                  key={i}
+                  className="w-[3px] bg-foreground rounded-full"
+                  animate={{
+                    height: ["4px", "14px", "8px", "16px", "6px"],
+                  }}
+                  transition={{
+                    duration: 0.8,
+                    repeat: Infinity,
+                    delay: i * 0.15,
+                    ease: "easeInOut",
+                  }}
+                />
+              ))}
+            </motion.div>
+          ) : (
+            // Music note icon when paused
+            <motion.svg
+              key="paused"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5"
+            >
+              <circle cx="8" cy="18" r="4" fill="currentColor" />
+              <path d="M12 18V2l7 4" />
+            </motion.svg>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.button>
   );
 };
+

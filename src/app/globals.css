@@ -270,3 +270,47 @@ div[class*="nextjs-"] {
   pointer-events: none !important;
   z-index: -9999 !important;
 }
+
+/* Batman Theme Transition Animation - Desktop only for performance */
+@media (min-width: 768px) {
+  ::view-transition-group(root) {
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  ::view-transition-new(root) {
+    mask: url('/batman.png') center / 0 no-repeat;
+    animation: bat-scale 1s ease-out both, bat-blur 1s ease-out both;
+  }
+
+  ::view-transition-old(root) {
+    animation: none;
+    animation-fill-mode: both;
+  }
+
+  @keyframes bat-scale {
+    to {
+      mask-size: 525vmax;
+    }
+  }
+
+  @keyframes bat-blur {
+
+    0%,
+    100% {
+      filter: blur(0);
+    }
+
+    50% {
+      filter: blur(4px);
+    }
+  }
+}
+
+/* Mobile: Simple fast transition for performance */
+@media (max-width: 767px) {
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}

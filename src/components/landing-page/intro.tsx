@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 import { useGSAP } from "@gsap/react";
@@ -43,10 +44,14 @@ const Intro = () => {
   return (
     <>
       <div className="flex justify-between items-center  w-full ">
-        <img
+        <Image
           src="/logo.jpg"
-          alt="Aditya Sharma logo"
-          className="w-[100px] h-[100px] rounded-full object-cover"
+          alt="Aditya Sharma - Android & ML Developer"
+          width={100}
+          height={100}
+          className="rounded-full object-cover"
+          style={{ width: 100, height: 100 }}
+          priority
         />
 
         <div className="flex   gap-2 ">
@@ -72,15 +77,13 @@ const Intro = () => {
               icon: SiX,
             },
           ].map(({ href, title, icon: Icon }, key) => (
-            <Link href={href} key={key} target="_blank">
-              {/* Old design: <Button size={"icon"} variant="outline" className=" shadow "> */}
-              {/* Previous soft interaction design commented out
-              <Button
-                size={"icon"}
-                variant="outline"
-                className="shadow-sm transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-lg active:scale-95 active:shadow-sm active:translate-y-0"
-              >
-              */}
+            <Link
+              href={href}
+              key={key}
+              target="_blank"
+              aria-label={`Visit my ${title} profile`}
+              title={title}
+            >
               <Button
                 size={"icon"}
                 variant="outline"
@@ -92,6 +95,7 @@ const Intro = () => {
                 active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
               >
                 <Icon />
+                <span className="sr-only">{title}</span>
               </Button>
             </Link>
           ))}

@@ -117,7 +117,11 @@ const ProjectsComponent = ({ project }: { project: any }) => {
 
       <div className="flex  gap-2  mt-2  max-sm:flex-wrap">
         {project.figmaFile && (
-          <Link href={project.figmaFile} target="_blank">
+          <Link
+            href={project.figmaFile}
+            target="_blank"
+            aria-label={`View ${project.name} Figma design file`}
+          >
             <Button className="rounded-md" variant="outline" size={"sm"}>
               <Figma />
               Figma File
@@ -125,7 +129,11 @@ const ProjectsComponent = ({ project }: { project: any }) => {
           </Link>
         )}
         {project.github && (
-          <Link href={project.github} target="_blank">
+          <Link
+            href={project.github}
+            target="_blank"
+            aria-label={`View ${project.name} source code on GitHub`}
+          >
             <RainbowButton
               size={"sm"}
               className="rounded-md text-xs"
@@ -136,7 +144,11 @@ const ProjectsComponent = ({ project }: { project: any }) => {
           </Link>
         )}
         {project.demo && (
-          <Link href={project.demo} target="_blank">
+          <Link
+            href={project.demo}
+            target="_blank"
+            aria-label={`View ${project.name} live demo`}
+          >
             <RainbowButton
               className=" rounded-md text-xs "
               variant="outline"

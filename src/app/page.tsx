@@ -1,25 +1,24 @@
 import HeroContent from "@/components/landing-page/hero-section/main-text";
-import Projects from "@/components/landing-page/projects";
 import Script from "next/script";
 
 // Homepage specific JSON-LD
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://adityasharma.me/#webpage",
-  url: "https://adityasharma.me",
+  "@id": "https://sharmadecode.vercel.app/#webpage",
+  url: "https://sharmadecode.vercel.app",
   name: "Aditya Sharma - Android Developer & ML Enthusiast Portfolio",
   description:
     "Official portfolio of Aditya Sharma. Final-year CSE student specializing in Android, DSA & Machine Learning. View my projects, skills, and hire me.",
   isPartOf: {
-    "@id": "https://adityasharma.me/#website",
+    "@id": "https://sharmadecode.vercel.app/#website",
   },
   about: {
-    "@id": "https://adityasharma.me/#person",
+    "@id": "https://sharmadecode.vercel.app/#person",
   },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    url: "https://adityasharma.me/cartoon-logo.jpg",
+    url: "https://sharmadecode.vercel.app/cartoon-logo.jpg",
   },
   datePublished: "2024-01-01",
   dateModified: "2026-01-11",
@@ -27,7 +26,7 @@ const homepageSchema = {
   potentialAction: [
     {
       "@type": "ReadAction",
-      target: ["https://adityasharma.me"],
+      target: ["https://sharmadecode.vercel.app"],
     },
   ],
   speakable: {

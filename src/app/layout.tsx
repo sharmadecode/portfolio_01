@@ -26,13 +26,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://adityasharma.me"),
+  metadataBase: new URL("https://sharmadecode.vercel.app"),
   title: {
     default: "Aditya Sharma (sharmadecode) | Mobile & ML Portfolio",
     template: "%s | Aditya Sharma",
   },
   description:
-    "Aditya Sharma - Mobile Developer & Machine Learning Engineer. View my portfolio and projects.",
+    "Aditya Sharma - Mobile Developer & Machine Learning Engineer from GGSIPU (GNIT), Greater Noida. B.Tech CSE student specializing in Android & on-device ML. View my portfolio and projects.",
 
   keywords: [
     "Aditya Sharma",
@@ -40,20 +40,35 @@ export const metadata: Metadata = {
     "sharmadecode",
     "sharmadecode portfolio",
     "Aditya Sharma portfolio",
+    "Aditya Sharma developer",
+    "Aditya Sharma GGSIPU",
+    "Aditya Sharma GNIT",
     "Android developer",
+    "Android developer India",
     "Kotlin Developer",
     "Jetpack Compose",
+    "Jetpack Compose developer",
     "Mobile App Developer",
+    "Mobile App Developer India",
     "Machine Learning Engineer",
+    "ML Engineer India",
     "SIH 2025 finalist",
+    "Smart India Hackathon finalist",
     "BharatKrishi app",
     "JalSuraksha app",
     "On-device ML",
+    "TensorFlow Lite developer",
+    "GGSIPU developer",
+    "GGSIPU student portfolio",
+    "GNIT Greater Noida",
+    "Greater Noida developer",
+    "Delhi NCR developer",
+    "B.Tech CSE student",
   ],
 
   authors: [
-    { name: "Aditya Sharma", url: "https://adityasharma.me" },
-    { name: "Aditya", url: "https://adityasharma.me" },
+    { name: "Aditya Sharma", url: "https://sharmadecode.vercel.app" },
+    { name: "Aditya", url: "https://sharmadecode.vercel.app" },
   ],
   creator: "Aditya Sharma",
   publisher: "Aditya Sharma",
@@ -93,15 +108,12 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://adityasharma.me",
+    canonical: "https://sharmadecode.vercel.app",
     languages: {
-      "en-US": "https://adityasharma.me",
-      en: "https://adityasharma.me",
+      "en-US": "https://sharmadecode.vercel.app",
+      en: "https://sharmadecode.vercel.app",
     },
-    types: {
-      "application/rss+xml": "https://adityasharma.me/rss.xml",
-      "application/atom+xml": "https://adityasharma.me/atom.xml",
-    },
+
   },
 
   openGraph: {
@@ -109,7 +121,7 @@ export const metadata: Metadata = {
     title: "Aditya Sharma | Software Dev",
     description:
       "I'm Aditya Sharma, an Android & ML Engineer specializing in Kotlin, Jetpack Compose & Machine Learning. Explore my portfolio.",
-    url: "https://adityasharma.me",
+    url: "https://sharmadecode.vercel.app",
     siteName: "Aditya Sharma - Developer Portfolio",
     locale: "en_US",
     alternateLocale: ["en_GB"],
@@ -152,7 +164,7 @@ export const metadata: Metadata = {
 
   appLinks: {
     web: {
-      url: "https://adityasharma.me",
+      url: "https://sharmadecode.vercel.app",
       should_fallback: true,
     },
   },
@@ -162,7 +174,6 @@ export const metadata: Metadata = {
     "pinterest-rich-pin": "true",
     "telegram:channel": "@sharmadecode",
     "msapplication-TileColor": "#000000",
-    "msapplication-config": "/browserconfig.xml",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
     "apple-mobile-web-app-title": "Aditya Sharma",
@@ -184,7 +195,7 @@ export const metadata: Metadata = {
     "DC.contributor": "Aditya Sharma",
     "DC.type": "InteractiveResource",
     "DC.format": "text/html",
-    "DC.identifier": "https://adityasharma.me",
+    "DC.identifier": "https://sharmadecode.vercel.app",
     "DC.language": "en",
     "DC.coverage": "Worldwide",
     "DC.rights": "© 2026 Aditya Sharma",
@@ -199,16 +210,23 @@ export default function RootLayout({
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://sharmadecode.vercel.app/#person",
     name: "Aditya Sharma",
-    alternateName: ["sharmadecode", "Aditya", "Aditya Rakesh Sharma"],
-    url: "https://adityasharma.me",
+    givenName: "Aditya",
+    familyName: "Sharma",
+    alternateName: ["sharmadecode", "Aditya", "Aditya Rakesh Sharma", "Aditya Sharma GGSIPU"],
+    url: "https://sharmadecode.vercel.app",
+    image: "https://sharmadecode.vercel.app/logo.jpg",
+    email: "adityarakeshsharma07@gmail.com",
+    jobTitle: "Android Developer & ML Engineer",
     sameAs: [
       "https://github.com/sharmadecode",
       "https://www.linkedin.com/in/aditya-sharma-109718322",
       "https://x.com/sharmadecode",
+      "https://leetcode.com/sharmadecode",
     ],
     description:
-      "Final-year Computer Science student focused on Android development and on-device machine learning.",
+      "B.Tech Computer Science student at GGSIPU (GNIT), Greater Noida. Specializing in Android development with Kotlin/Jetpack Compose and on-device Machine Learning. SIH 2025 Finalist.",
     knowsAbout: [
       "Android Development",
       "Jetpack Compose",
@@ -216,26 +234,46 @@ export default function RootLayout({
       "On-device Machine Learning",
       "TensorFlow Lite",
       "Data Structures and Algorithms",
+      "Spring Boot",
+      "Firebase",
     ],
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Guru Gobind Singh Indraprastha University",
+      alternateName: "GGSIPU",
+      sameAs: "https://www.ipu.ac.in/",
+    },
+    worksFor: {
+      "@type": "EducationalOrganization",
+      name: "Greater Noida Institute of Technology",
+      alternateName: "GNIT",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Greater Noida",
+      addressRegion: "Uttar Pradesh",
+      addressCountry: "India",
+    },
+    nationality: "Indian",
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://adityasharma.me/#website",
-    url: "https://adityasharma.me",
+    "@id": "https://sharmadecode.vercel.app/#website",
+    url: "https://sharmadecode.vercel.app",
     name: "Aditya Sharma - Android & ML Portfolio",
     description:
       "Official portfolio website of Aditya Sharma - Android Developer & ML Engineer",
     publisher: {
-      "@id": "https://adityasharma.me/#person",
+      "@id": "https://sharmadecode.vercel.app/#person",
     },
     inLanguage: "en-US",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://adityasharma.me/?s={search_term_string}",
+        urlTemplate: "https://sharmadecode.vercel.app/?s={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -244,13 +282,13 @@ export default function RootLayout({
   const profilePageSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "@id": "https://adityasharma.me/#profilepage",
-    url: "https://adityasharma.me",
+    "@id": "https://sharmadecode.vercel.app/#profilepage",
+    url: "https://sharmadecode.vercel.app",
     name: "Aditya Sharma - Android & ML Engineer",
     description:
       "Portfolio of Aditya Sharma showcasing Android and Machine Learning projects.",
     mainEntity: {
-      "@id": "https://adityasharma.me/#person",
+      "@id": "https://sharmadecode.vercel.app/#person",
     },
     datePublished: "2024-01-01",
     dateModified: "2026-01-11",
@@ -265,7 +303,7 @@ export default function RootLayout({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://adityasharma.me",
+        item: "https://sharmadecode.vercel.app",
       },
     ],
   };
@@ -273,29 +311,29 @@ export default function RootLayout({
   const portfolioSchema = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    "@id": "https://adityasharma.me/#portfolio",
+    "@id": "https://sharmadecode.vercel.app/#portfolio",
     name: "Aditya Sharma's Developer Portfolio",
     creator: {
-      "@id": "https://adityasharma.me/#person",
+      "@id": "https://sharmadecode.vercel.app/#person",
     },
     description:
       "A collection of projects by Aditya Sharma",
-    url: "https://adityasharma.me/projects",
+    url: "https://sharmadecode.vercel.app/projects",
     inLanguage: "en-US",
   };
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://adityasharma.me/#organization",
+    "@id": "https://sharmadecode.vercel.app/#organization",
     name: "Aditya Sharma",
-    url: "https://adityasharma.me",
+    url: "https://sharmadecode.vercel.app",
     logo: {
       "@type": "ImageObject",
-      url: "https://adityasharma.me/cartoon-logo.jpg",
+      url: "https://sharmadecode.vercel.app/cartoon-logo.jpg",
     },
     founder: {
-      "@id": "https://adityasharma.me/#person",
+      "@id": "https://sharmadecode.vercel.app/#person",
     },
     sameAs: [
       "https://github.com/sharmadecode",
@@ -316,31 +354,10 @@ export default function RootLayout({
 
         <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
 
-        <link
-          rel="search"
-          type="application/opensearchdescription+xml"
-          title="Aditya Sharma"
-          href="/opensearch.xml"
-        />
+        {/* Prefetch batman image for smooth theme transitions - desktop only */}
+        <link rel="prefetch" href="/batman.png" as="image" type="image/png" media="(min-width: 768px)" />
 
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="Aditya Sharma RSS Feed"
-          href="/rss.xml"
-        />
-        <link
-          rel="alternate"
-          type="application/atom+xml"
-          title="Aditya Sharma Atom Feed"
-          href="/atom.xml"
-        />
-
-        <link rel="author" href="/humans.txt" />
-
-        <link rel="canonical" href="https://adityasharma.me" />
-
-        <link rel="prefetch" href="/designs" />
+        <link rel="canonical" href="https://sharmadecode.vercel.app" />
         <style dangerouslySetInnerHTML={{
           __html: `
           nextjs-portal,
@@ -424,7 +441,7 @@ export default function RootLayout({
           {" "}
           <Analytics />
           {children} <Footer />
-          <div className=" fixed bottom-4 right-4  flex flex-col items-center gap-2 z-50 ">
+          <div className="fixed bottom-4 right-4 flex flex-col items-center gap-2 z-50">
             <ModeToggle />
             <MusicToggleButton />
           </div>

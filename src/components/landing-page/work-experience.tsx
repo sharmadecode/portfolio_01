@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const data = [
   {
     img: "/logo/sih.jpg",
@@ -33,10 +35,12 @@ const WorkExperience = () => {
         <div className="flex flex-col gap-3">
           {data.map((experience, index) => (
             <div key={index} className="flex gap-4 items-center">
-              <img
+              <Image
                 src={experience.img}
-                alt={experience.title + " company logo"}
-                className="rounded-full h-14 w-14 object-cover"
+                alt={`${experience.title} logo`}
+                width={56}
+                height={56}
+                className="rounded-full object-cover"
               />
               <div className="w-full">
                 <div className="font-semibold line-clamp-2 ">

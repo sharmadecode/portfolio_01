@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SiDiscord } from "react-icons/si";
 import Link from "next/link";
+import Image from "next/image";
 
 interface FooterStringProps {
   soundUrl?: string;
@@ -121,7 +122,7 @@ const FooterString = ({
   );
 
   return (
-    <svg viewBox="0 0 800 10" className="w-full h-[10px] overflow-visible">
+    <svg viewBox="0 0 800 10" className="w-full h-[10px] overflow-visible" aria-hidden="true">
       <defs>
         <linearGradient
           id="footer-string-grad"
@@ -165,11 +166,14 @@ export default function Footer() {
         <div className="absolute top-0 left-0 right-0">
           <FooterString soundUrl="/audio/string-pluck.mp3" />
         </div>
-        <img
+        <Image
           src="/logo/leaf.svg"
-          alt="Footer decorative leaf"
+          alt=""
+          width={128}
+          height={128}
           className="w-32 sm:mask-r-from-90% absolute right-0 max-sm:blur-[2px] max-sm:hidden dark:hidden block"
           style={{ transform: "rotateX(180deg)" }}
+          aria-hidden="true"
         />
 
         {/* Discord Section - Compact & Animated */}

@@ -17,17 +17,17 @@ export const metadata: Metadata = {
     "sharmadecode projects",
   ],
   alternates: {
-    canonical: "https://adityasharma.me/projects",
+    canonical: "https://sharmadecode.vercel.app/projects",
   },
   openGraph: {
     title: "Projects | Aditya Sharma - Mobile & ML Developer",
     description:
       "Explore my portfolio of Android development and Machine Learning projects built with Kotlin, Jetpack Compose, and TensorFlow Lite.",
-    url: "https://adityasharma.me/projects",
+    url: "https://sharmadecode.vercel.app/projects",
     type: "website",
     images: [
       {
-        url: "https://adityasharma.me/cartoon-logo.jpg",
+        url: "https://sharmadecode.vercel.app/cartoon-logo.jpg",
         width: 1200,
         height: 630,
         alt: "Aditya Sharma Projects Portfolio",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Projects | Aditya Sharma",
     description: "View my Android development and Machine Learning projects.",
     images: [
-      "https://adityasharma.me/cartoon-logo.jpg",
+      "https://sharmadecode.vercel.app/cartoon-logo.jpg",
     ],
   },
 };
