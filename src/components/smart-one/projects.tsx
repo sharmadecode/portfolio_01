@@ -75,7 +75,13 @@ const ProjectsComponent = ({ project }: { project: any }) => {
         <div className="flex flex-col   max-sm:flex-wrap ">
           <div className=" flex justify-between items-center ">
             <div className=" block  font-semibold text-lg line-clamp-1  truncate  ">
-              {project.name}
+              {project.name === "BharatKrishi" ? (
+                <Link href="/bharat-krishi" className="hover:underline decoration-emerald-500 underline-offset-4 decoration-2 transition-all">
+                  {project.name}
+                </Link>
+              ) : (
+                project.name
+              )}
             </div>{" "}
             <div className=" text-nowrap text-xs">{project.timeLine}</div>
           </div>
