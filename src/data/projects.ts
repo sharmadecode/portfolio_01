@@ -5,7 +5,7 @@ export const WebProjectsArr = [
     image: "/projects/bharat-krishi-1.jpg",
     images: ["/projects/bharat-krishi-1.jpg", "/projects/bharat-krishi-2.jpg", "/projects/bharat-krishi-3.jpg"],
     github: "https://github.com/sharmadecode/BharatKrishi",
-    demo: "",
+    demo: "/bharat-krishi",
     figmaFile: "",
     tech: [
       "Kotlin",

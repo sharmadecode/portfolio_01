@@ -75,8 +75,9 @@ const ProjectsComponent = ({ project }: { project: any }) => {
         <div className="flex flex-col   max-sm:flex-wrap ">
           <div className=" flex justify-between items-center ">
             <div className=" block  font-semibold text-lg line-clamp-1  truncate  ">
-              {project.name === "BharatKrishi" ? (
-                <Link href="/bharat-krishi" className="hover:underline decoration-emerald-500 underline-offset-4 decoration-2 transition-all">
+              {/* If demo link is internal (starts with /), make the title a link */}
+              {project.demo && project.demo.startsWith("/") ? (
+                <Link href={project.demo} className="hover:underline decoration-emerald-500 underline-offset-4 decoration-2 transition-all">
                   {project.name}
                 </Link>
               ) : (
@@ -152,7 +153,7 @@ const ProjectsComponent = ({ project }: { project: any }) => {
         {project.demo && (
           <Link
             href={project.demo}
-            target="_blank"
+            target={project.demo.startsWith("/") ? undefined : "_blank"}
             aria-label={`View ${project.name} live demo`}
           >
             <RainbowButton
